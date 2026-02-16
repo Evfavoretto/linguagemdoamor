@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Quiz: Sua Linguagem de Amor e o Trauma que Influencia</title>
-  <meta name="description" content="Faça o quiz e descubra qual ferida emocional pode estar influenciando sua linguagem de amor. Veja seu diagnóstico e o primeiro passo para se libertar." />
+  <meta name="description" content="Faça o quiz e descubra qual ferida emocional pode estar influenciando sua linguagem de amor. Envie 'AMOR' no WhatsApp para receber o diagnóstico e o primeiro passo." />
 
   <meta property="og:title" content="Quiz: Sua Linguagem de Amor" />
-  <meta property="og:description" content="Descubra qual trauma pode estar influenciando seu jeito de amar — e qual primeiro passo te ajuda a se libertar." />
+  <meta property="og:description" content="Responda o quiz e envie AMOR no WhatsApp para receber seu diagnóstico + primeiro passo concreto." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -22,7 +22,6 @@
       --line:#E9EEF5;
       --bg:#FFFFFF;
       --ok:#10B981;
-      --warn:#E11D48;
       --shadow: 0 14px 34px rgba(0,0,0,.06);
       --radius: 22px;
     }
@@ -34,7 +33,6 @@
     a{text-decoration:none}
     .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
-    /* Barra topo */
     .top-bar{
       background:var(--rose);
       color:#fff;
@@ -46,7 +44,6 @@
       text-transform:uppercase;
     }
 
-    /* Hero */
     .hero{padding:28px 0 10px;background:#fff}
     .hero-card{
       background:#fff;border:1px solid var(--line);border-radius:var(--radius);
@@ -78,70 +75,39 @@
       background:linear-gradient(90deg,var(--rose),var(--blue))
     }
 
-    /* Layout */
     section{padding:26px 0}
     .grid{display:grid;gap:18px}
     @media(min-width:900px){ .grid.two{grid-template-columns:1.05fr .95fr} }
 
-    /* Cards */
     .card{
       background:#fff;border:1px solid var(--line);border-radius:18px;
       padding:18px;box-shadow:0 10px 28px rgba(31,35,48,.05)
     }
-    .card.soft{background:#fff}
     .card.pink{background:var(--rose-2)}
     .card.blue{background:var(--blue-2)}
-    .title{
-      font-weight:900;
-      margin:0 0 6px;
-      font-size:18px;
-    }
+    .title{font-weight:900;margin:0 0 6px;font-size:18px}
     p{margin:8px 0 0;color:var(--soft);font-size:16px}
 
-    /* Quiz */
     .quiz-head{
       display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
       margin-bottom:10px
     }
     .progress{
-      flex:1;
-      height:10px;
-      background:#F1F5F9;
-      border-radius:999px;
-      overflow:hidden;
-      border:1px solid var(--line);
-      min-width:180px;
+      flex:1;height:10px;background:#F1F5F9;border-radius:999px;overflow:hidden;
+      border:1px solid var(--line);min-width:180px;
     }
     .bar{height:100%;width:0%;background:linear-gradient(90deg,var(--rose),var(--blue))}
     .step{
-      font-weight:900;
-      font-size:12px;
-      color:#475569;
-      letter-spacing:.06em;
-      text-transform:uppercase;
+      font-weight:900;font-size:12px;color:#475569;letter-spacing:.06em;text-transform:uppercase;
       white-space:nowrap;
     }
 
-    .q{
-      margin-top:8px;
-      font-weight:900;
-      font-size:20px;
-      color:var(--ink);
-      line-height:1.25;
-    }
+    .q{margin-top:8px;font-weight:900;font-size:20px;color:var(--ink);line-height:1.25}
     .options{display:grid;gap:10px;margin-top:14px}
     .opt{
-      width:100%;
-      text-align:left;
-      border:1px solid var(--line);
-      background:#fff;
-      padding:14px 14px;
-      border-radius:14px;
-      cursor:pointer;
-      font-weight:800;
-      color:var(--ink);
-      box-shadow:0 8px 18px rgba(0,0,0,.04);
-      transition:.15s ease;
+      width:100%;text-align:left;border:1px solid var(--line);background:#fff;
+      padding:14px;border-radius:14px;cursor:pointer;font-weight:800;color:var(--ink);
+      box-shadow:0 8px 18px rgba(0,0,0,.04);transition:.15s ease;
     }
     .opt:hover{transform:translateY(-1px);border-color:#dbeafe}
     .opt:focus{outline:3px solid var(--blue-2)}
@@ -158,22 +124,14 @@
     .btn:focus{outline:3px solid var(--blue-2)}
     .btn[disabled]{opacity:.55;cursor:not-allowed}
 
-    .note{
-      margin-top:12px;
-      font-size:14px;
-      color:#64748B;
-    }
+    .note{margin-top:12px;font-size:14px;color:#64748B}
 
-    /* Resultado */
-    .result{
-      display:none;
-      margin-top:16px;
-    }
+    /* TELA FINAL (sem revelar diagnóstico) */
+    .done{display:none;margin-top:16px}
     .badge{
       display:inline-flex;align-items:center;gap:8px;
       font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.06em;
-      padding:8px 12px;border-radius:999px;
-      background:#fff;border:1px solid var(--line);
+      padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);
     }
     .badge .dot{width:9px;height:9px;border-radius:50%;background:var(--ok)}
     .h2{
@@ -184,37 +142,14 @@
       background:linear-gradient(90deg,var(--rose),var(--blue));
       -webkit-background-clip:text;background-clip:text;color:transparent;
     }
-    .pill{
-      display:inline-block;
-      margin-top:10px;
-      background:rgba(16,185,129,.12);
-      color:#065F46;
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:900;
-      font-size:12px;
-    }
-    .steps{
-      margin-top:12px;
-      display:grid;gap:10px;
-    }
-    .stepcard{
-      background:#fff;border:1px solid var(--line);border-radius:16px;
-      padding:14px;
-    }
-    .stepcard b{display:block;margin-bottom:6px}
     .callout{
-      margin-top:14px;
-      border-radius:16px;
-      padding:16px;
+      margin-top:14px;border-radius:16px;padding:16px;
       background:linear-gradient(90deg,var(--rose-2),var(--blue-2));
       border:1px solid var(--line);
     }
 
-    /* Rodapé */
     footer{padding:22px 0;background:var(--rose);color:#fff;font-size:14px;text-align:center;margin-top:16px}
 
-    /* Whats flutuante */
     .whats-float{
       position:fixed; right:18px; bottom:18px; z-index:1000;
       width:60px; height:60px; border-radius:50%;
@@ -223,7 +158,6 @@
     }
     .whats-float svg{width:30px; height:30px; fill:#fff}
 
-    /* Acessibilidade: reduzir movimento */
     @media (prefers-reduced-motion: reduce){
       *{scroll-behavior:auto!important;transition:none!important}
       .opt:hover{transform:none}
@@ -238,10 +172,10 @@
     <div class="wrap">
       <div class="hero-card">
         <span class="kicker">Leve • Rápido • Profundo</span>
-        <h1>Sua linguagem de amor pode ser um pedido silencioso de cura.</h1>
+        <h1>Descubra o padrão… e receba seu diagnóstico no WhatsApp.</h1>
         <p class="lead">
-          Responda com sinceridade. No final, você recebe um <strong>diagnóstico</strong> (a ferida mais provável),
-          a <strong>linguagem de amor</strong> associada e o <strong>primeiro passo</strong> para começar a se libertar.
+          Responda com sinceridade. No final, você envia uma mensagem pronta para o WhatsApp e recebe:
+          <strong>diagnóstico + linguagem de amor + primeiro passo concreto</strong>.
         </p>
         <div class="divider"></div>
       </div>
@@ -252,7 +186,7 @@
     <div class="wrap grid two">
 
       <!-- QUIZ -->
-      <div class="card soft" aria-live="polite">
+      <div class="card" aria-live="polite">
         <div class="quiz-head">
           <div class="step" id="stepLabel">Pergunta 1 de 6</div>
           <div class="progress" aria-label="Progresso do quiz">
@@ -261,7 +195,6 @@
         </div>
 
         <div class="q" id="question">Carregando…</div>
-
         <div class="options" id="options"></div>
 
         <div class="controls">
@@ -269,63 +202,58 @@
           <button class="btn primary" id="restartBtn" type="button" style="margin-left:auto">Reiniciar</button>
         </div>
 
-        <div class="note" id="hint">
+        <div class="note">
           Dica: escolha a alternativa que parece “mais automática” em você — não a mais bonita.
         </div>
 
-        <!-- RESULTADO -->
-        <div class="result" id="result">
-          <span class="badge"><span class="dot"></span> seu diagnóstico</span>
-          <div class="h2" id="resTitle">—</div>
-          <p id="resExplain"></p>
+        <!-- FINAL (envio no WhatsApp) -->
+        <div class="done" id="done">
+          <span class="badge"><span class="dot"></span> pronto!</span>
+          <div class="h2">Seu diagnóstico está pronto ✅</div>
 
-          <div class="pill" id="resLove">—</div>
+          <p>
+            Para receber <strong>a resposta + seu primeiro passo concreto</strong>, clique no botão abaixo e
+            envie a mensagem automática no WhatsApp.
+          </p>
 
           <div class="callout">
-            <b style="display:block;margin-bottom:6px;color:var(--ink)">O ponto mais importante</b>
+            <b style="display:block;margin-bottom:6px;color:var(--ink)">Importante</b>
             <p style="margin:0;color:var(--soft)">
-              Sua linguagem de amor não é “carência”. É um mapa. Quando você entende o mapa, para de implorar amor…
-              e começa a atrair amor leve.
+              O resultado será enviado no WhatsApp para você aplicar com clareza (sem se culpar e sem se violentar).
             </p>
           </div>
 
-          <div class="steps" id="resSteps"></div>
-
           <div class="controls" style="margin-top:14px">
-            <a class="btn primary" id="ctaWhats" href="#" target="_blank" rel="noopener">Digitar AMOR agora</a>
-            <button class="btn ghost" id="copyBtn" type="button">Copiar meu resultado</button>
+            <a class="btn primary" id="ctaWhats" href="#" target="_blank" rel="noopener">Enviar “AMOR” no WhatsApp</a>
+            <button class="btn ghost" id="copyBtn" type="button">Copiar mensagem</button>
           </div>
 
           <div class="note" id="copyMsg" style="display:none">Copiado ✅</div>
         </div>
       </div>
 
-      <!-- LATERAL / CONTEXTO -->
+      <!-- LATERAL -->
       <div class="grid" style="align-content:start">
         <div class="card pink">
-          <div class="title">Como funciona este diagnóstico</div>
+          <div class="title">Como funciona</div>
           <p>
-            Cada resposta soma pontos para uma ferida emocional. No final, mostramos a <strong>mais provável</strong>
-            (e uma “segunda mais provável” se estiver muito perto).
-          </p>
-          <p style="margin-top:10px">
-            Isso não é laudo. É um espelho para você perceber seu padrão e começar um caminho de cura com mais consciência.
+            Este quiz identifica qual ferida emocional está mais ativa e como ela influencia seu jeito de amar.
+            O resultado final é enviado no WhatsApp para você receber o diagnóstico completo e um passo prático.
           </p>
         </div>
 
         <div class="card blue">
           <div class="title">O que você vai receber</div>
-          <p>• Ferida emocional mais provável</p>
-          <p>• Linguagem de amor que ela influencia</p>
-          <p>• Um <strong>primeiro passo</strong> simples (sem se violentar)</p>
-          <p>• Mensagem pronta para enviar: “AMOR”</p>
+          <p>• Diagnóstico (ferida emocional mais provável)</p>
+          <p>• Linguagem de amor influenciada</p>
+          <p>• Primeiro passo concreto para começar a se libertar</p>
         </div>
 
-        <div class="card soft">
-          <div class="title">Importante</div>
+        <div class="card">
+          <div class="title">A cura começa aqui</div>
           <p>
-            Se alguma pergunta tocar numa dor sensível, respira. Você não precisa resolver tudo hoje.
-            A cura começa quando você para de se acusar e começa a se entender.
+            Quando você entende o padrão, você para de implorar amor…
+            e começa a atrair amor leve.
           </p>
         </div>
       </div>
@@ -333,121 +261,24 @@
     </div>
   </section>
 
-  <footer>© Quiz de Diagnóstico Emocional — Todos os direitos reservados.</footer>
+  <footer>© Quiz de Diagnóstico Emocional — Todos os direitos reservados EA FAVORETTO LTDA.</footer>
 
-  <!-- Whats flutuante -->
   <a class="whats-float" href="https://wa.me/5549998110445?text=Amor" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M20.5 3.5A10 10 0 0 0 3.2 17.7L2 22l4.4-1.2A10 10 0 1 0 20.5 3.5Zm-8.4 2.2c4.1 0 7.4 3.3 7.4 7.4a7.4 7.4 0 0 1-10.1 6.8l-.3-.1-2.6.7.7-2.5-.1-.3a7.4 7.4 0 0 1 5-11.9Zm4.2 9.8c-.2.6-1.1 1-1.5 1.1-.4.1-.9.1-1.5 0s-1.5-.5-2.6-1.1c-1-.6-1.8-1.6-2.1-2.1-.3-.5-.5-1.3-.1-1.9.2-.3.5-.8.8-.8h.6c.1 0 .4-.1.6.5.2.6.8 2 .9 2.2.1.2.1.4 0 .6s-.2.4-.4.6c-.2.2-.4.4-.2.7.2.3.9 1.4 2.1 2 .9.5 1.6.6 1.9.4.3-.2.4-.5.6-.8.2-.3.5-.4.8-.3l1.9.9c.3.1.5.3.6.5Z"/></svg>
   </a>
 
   <script>
-    // Tipos (feridas)
+    // Número correto (49 99811-0445) com código do país
+    const waNumber = "5549998110445";
+    const waBase = (text) => `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+
+    // TIPOS (apenas para cálculo interno, sem mostrar na tela)
     const TYPES = {
-      rejeicao: {
-        label: "Ferida da Rejeição",
-        love: "Linguagem de amor mais provável: <b>Presentes</b> (ser escolhida).",
-        explain:
-          "Você tende a sentir amor quando recebe algo concreto — não pelo objeto, mas pela mensagem escondida: “eu te escolhi”.",
-        firstSteps: [
-          {
-            t: "1) Troque prova por presença (micro-ritual)",
-            d: "Por 7 dias, escolha 1 gesto diário de presença com você (3 minutos): mão no peito + respiração lenta + frase: “Eu me escolho hoje”."
-          },
-          {
-            t: "2) Nomeie o pedido real",
-            d: "Quando surgir vontade de ‘prova’, complete mentalmente: “Eu queria me sentir _______ (escolhida/valorizada/segura)”."
-          },
-          {
-            t: "3) Pedido leve no relacionamento",
-            d: "Em vez de cobrar, peça com clareza: “Hoje eu queria um sinal de escolha: pode me surpreender com algo simples (uma mensagem, um bilhete)?”"
-          }
-        ],
-        color: "--rose"
-      },
-      traicao: {
-        label: "Ferida da Traição",
-        love: "Linguagem de amor mais provável: <b>Toque físico</b> (segurança).",
-        explain:
-          "Seu corpo procura segurança no contato: abraço, mão dada, proximidade. O toque vira garantia de estabilidade.",
-        firstSteps: [
-          {
-            t: "1) Recoloque segurança no corpo",
-            d: "Antes de procurar o outro, faça 60 segundos de ‘pressão segura’: abrace seus ombros com as mãos e aperte levemente enquanto respira."
-          },
-          {
-            t: "2) Combine um sinal de reconexão",
-            d: "Crie um código simples (ex.: ‘pausa’) para pedir um abraço de 20 segundos sem discussão."
-          },
-          {
-            t: "3) Diferencie medo de intuição",
-            d: "Pergunte: “Eu tenho fatos, ou só sensação?” Se for sensação, primeiro acalme o corpo; depois converse."
-          }
-        ],
-        color: "--blue"
-      },
-      humilhacao: {
-        label: "Ferida da Humilhação",
-        love: "Linguagem de amor mais provável: <b>Palavras de afirmação</b> (ser suficiente).",
-        explain:
-          "Você precisa ouvir que é capaz, digna, amável. A sua alma quer uma confirmação que faltou ou foi negada.",
-        firstSteps: [
-          {
-            t: "1) Interrompa a voz que diminui",
-            d: "Quando vier autocrítica, responda em voz baixa: “Eu estou aprendendo. Eu não sou a minha falha.”"
-          },
-          {
-            t: "2) Um elogio verdadeiro por dia",
-            d: "Escreva 1 frase realista: “Hoje eu fui suficiente em _______”. Sem exagero. Só verdade."
-          },
-          {
-            t: "3) Peça afirmação com direção",
-            d: "Em vez de “me elogia”, diga: “Pode me dizer o que você valoriza em mim como pessoa?”"
-          }
-        ],
-        color: "--rose"
-      },
-      injustica: {
-        label: "Ferida da Injustiça",
-        love: "Linguagem de amor mais provável: <b>Atos de serviço</b> (prova em atitude).",
-        explain:
-          "Você confia quando vê ação. Palavras bonitas não sustentam; o amor precisa ser demonstrado no cotidiano.",
-        firstSteps: [
-          {
-            t: "1) Ajuste o radar do controle",
-            d: "Escolha 1 tarefa por semana para não controlar o ‘como’. Treine confiar no processo, não na perfeição."
-          },
-          {
-            t: "2) Defina ‘provas’ saudáveis",
-            d: "Liste 3 atitudes que te fazem bem (ex.: pontualidade, ajudar, cumprir combinados). Use isso como base de conversa."
-          },
-          {
-            t: "3) Pedido objetivo, sem cobrança",
-            d: "Troque “você nunca…” por: “Para eu me sentir amada, ajuda muito quando você _______ (ex.: faz X 2x/semana)”."
-          }
-        ],
-        color: "--blue"
-      },
-      abandono: {
-        label: "Ferida do Abandono",
-        love: "Linguagem de amor mais provável: <b>Tempo de qualidade</b> (presença).",
-        explain:
-          "O que mais dói é a ausência. Então presença, atenção e constância viram sinônimo de amor.",
-        firstSteps: [
-          {
-            t: "1) Micro-presença diária (com você)",
-            d: "Reserve 10 minutos sem tela para você: banho consciente, café em silêncio, ou caminhada curta."
-          },
-          {
-            t: "2) Combine um ‘encontro fixo’",
-            d: "Marque um momento semanal (30–60 min) para conversar e estar junto. Constância cura mais que intensidade."
-          },
-          {
-            t: "3) Trate o gatilho com gentileza",
-            d: "Quando sentir medo de perder, diga: “Eu senti insegurança. Podemos nos reconectar por 5 minutos agora?”"
-          }
-        ],
-        color: "--rose"
-      }
+      rejeicao: "Ferida da Rejeição",
+      traicao: "Ferida da Traição",
+      humilhacao: "Ferida da Humilhação",
+      injustica: "Ferida da Injustiça",
+      abandono: "Ferida do Abandono"
     };
 
     // Perguntas: cada opção soma pontos para um tipo
@@ -514,12 +345,9 @@
       },
     ];
 
-    const waNumber = "5549998110445";
-    const waBase = (text) => `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
-
     // Estado
     let idx = 0;
-    let answers = []; // guarda índice da opção escolhida por pergunta
+    let answers = [];
     let score = {rejeicao:0, traicao:0, humilhacao:0, injustica:0, abandono:0};
 
     const elQ = document.getElementById("question");
@@ -529,11 +357,7 @@
     const backBtn = document.getElementById("backBtn");
     const restartBtn = document.getElementById("restartBtn");
 
-    const result = document.getElementById("result");
-    const resTitle = document.getElementById("resTitle");
-    const resExplain = document.getElementById("resExplain");
-    const resLove = document.getElementById("resLove");
-    const resSteps = document.getElementById("resSteps");
+    const done = document.getElementById("done");
     const ctaWhats = document.getElementById("ctaWhats");
     const copyBtn = document.getElementById("copyBtn");
     const copyMsg = document.getElementById("copyMsg");
@@ -544,13 +368,12 @@
       idx = 0;
       answers = [];
       score = {rejeicao:0, traicao:0, humilhacao:0, injustica:0, abandono:0};
-      result.style.display = "none";
+      done.style.display = "none";
       copyMsg.style.display = "none";
       render();
     }
 
     function calcScores(){
-      // Recalcula do zero baseado em answers (mais robusto para voltar)
       score = {rejeicao:0, traicao:0, humilhacao:0, injustica:0, abandono:0};
       answers.forEach((optIndex, qIndex) => {
         if(optIndex == null) return;
@@ -560,15 +383,12 @@
     }
 
     function render(){
-      // progresso
       const total = QUESTIONS.length;
       const current = clamp(idx+1, 1, total);
       elStep.textContent = `Pergunta ${current} de ${total}`;
       elBar.style.width = `${Math.round((idx/total)*100)}%`;
-
-      // botões
       backBtn.disabled = idx === 0;
-      // tela de pergunta
+
       const q = QUESTIONS[idx];
       elQ.textContent = q.q;
 
@@ -592,9 +412,8 @@
         idx += 1;
         render();
       }else{
-        // final
         elBar.style.width = "100%";
-        showResult();
+        finish();
       }
     }
 
@@ -608,84 +427,57 @@
       const entries = Object.entries(score).sort((a,b)=>b[1]-a[1]);
       const top = entries[0];
       const second = entries[1];
-      return {top, second, entries};
+      return {top, second};
     }
 
-    function showResult(){
+    function makeCode(){
+      // Código simples para você identificar (ex.: A1B-94K)
+      const chars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+      const part = (n)=>Array.from({length:n},()=>chars[Math.floor(Math.random()*chars.length)]).join("");
+      return `${part(3)}-${part(3)}`;
+    }
+
+    function finish(){
       const {top, second} = getTopTwo();
       const topKey = top[0];
       const topVal = top[1];
       const secondKey = second[0];
       const secondVal = second[1];
 
-      const primary = TYPES[topKey];
+      const close = (topVal - secondVal) <= 1;
 
-      // Título / explicação
-      resTitle.textContent = primary.label;
-      resExplain.textContent = primary.explain;
-      resLove.innerHTML = primary.love;
+      const code = makeCode();
 
-      // passos
-      resSteps.innerHTML = "";
-      primary.firstSteps.forEach(step => {
-        const div = document.createElement("div");
-        div.className = "stepcard";
-        div.innerHTML = `<b>${step.t}</b><span style="color:var(--soft);font-size:15px">${step.d}</span>`;
-        resSteps.appendChild(div);
-      });
-
-      // Se ficar muito próximo, mostra “também pode ser”
-      const close = (topVal - secondVal) <= 1; // empate ou quase
-      let extra = "";
-      if(close){
-        extra = `\n\n(Observação: seu segundo padrão mais forte foi ${TYPES[secondKey].label}. Às vezes, as duas feridas se misturam.)`;
-      }
-
-      // CTA Whats
+      // Mensagem: inclui o diagnóstico (pra você saber), mas sem mostrar na página
       const msg =
-        `AMOR\n\nMeu resultado no quiz:\n- Diagnóstico principal: ${primary.label}\n- ${stripHtml(primary.love)}\n\nQuero entender melhor e receber orientação do próximo passo.${extra}`;
+        `AMOR ✅\n` +
+        `Meu quiz ficou pronto.\n\n` +
+        `Código: ${code}\n` +
+        `Diagnóstico (interno): ${TYPES[topKey]}${close ? ` (2º: ${TYPES[secondKey]})` : ""}\n\n` +
+        `Quero receber minha resposta + o primeiro passo concreto para me libertar desse trauma.`;
+
       ctaWhats.href = waBase(msg);
 
-      result.style.display = "block";
-      // Scroll suave para resultado
-      result.scrollIntoView({behavior:"smooth", block:"start"});
+      // Copiar também essa mensagem
+      copyBtn.onclick = () => copyMessage(msg);
+
+      done.style.display = "block";
+      done.scrollIntoView({behavior:"smooth", block:"start"});
     }
 
-    function stripHtml(html){
-      const tmp = document.createElement("div");
-      tmp.innerHTML = html;
-      return tmp.textContent || tmp.innerText || "";
-    }
-
-    // copiar resultado
-    async function copyResult(){
-      const {top, second} = getTopTwo();
-      const topKey = top[0];
-      const secondKey = second[0];
-
-      const primary = TYPES[topKey];
-      const close = (top[1] - second[1]) <= 1;
-      const text =
-        `Meu resultado no quiz:\n` +
-        `• Diagnóstico principal: ${primary.label}\n` +
-        `• ${stripHtml(primary.love)}\n` +
-        `• Primeiro passo: ${primary.firstSteps[0].t} — ${primary.firstSteps[0].d}\n` +
-        (close ? `• Segundo padrão próximo: ${TYPES[secondKey].label}\n` : "");
-
+    async function copyMessage(text){
       try{
         await navigator.clipboard.writeText(text);
         copyMsg.style.display = "block";
         setTimeout(()=>copyMsg.style.display="none", 1400);
       }catch(e){
-        alert("Não foi possível copiar automaticamente. Selecione e copie manualmente pelo WhatsApp.");
+        alert("Não foi possível copiar automaticamente. Copie a mensagem pelo WhatsApp ao clicar no botão.");
       }
     }
 
     backBtn.addEventListener("click", goBack);
     restartBtn.addEventListener("click", resetAll);
-    copyBtn.addEventListener("click", copyResult);
 
-    // iniciar
     resetAll();
   </script>
 </body>

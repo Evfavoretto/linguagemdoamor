@@ -4,481 +4,583 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Quiz: Sua Linguagem de Amor e o Trauma que Influencia</title>
-  <meta name="description" content="Faça o quiz e descubra qual ferida emocional pode estar influenciando sua linguagem de amor. Envie 'AMOR' no WhatsApp para receber o diagnóstico e o primeiro passo." />
-
-  <meta property="og:title" content="Quiz: Sua Linguagem de Amor" />
-  <meta property="og:description" content="Responda o quiz e envie AMOR no WhatsApp para receber seu diagnóstico + primeiro passo concreto." />
-  <meta property="og:type" content="website" />
+  <title>Diagnóstico: Ferida Emocional e Linguagem do Amor</title>
+  <meta name="description" content="Descubra qual ferida emocional pode ter influenciado sua linguagem do amor e receba seu diagnóstico no WhatsApp." />
 
   <style>
     :root{
       --rose:#C9376E;
-      --rose-2:#FCE9F0;
       --blue:#4DA6FF;
       --blue-2:#E6F3FF;
       --ink:#0F172A;
       --soft:#667085;
       --line:#E9EEF5;
       --bg:#FFFFFF;
-      --ok:#10B981;
-      --shadow: 0 14px 34px rgba(0,0,0,.06);
-      --radius: 22px;
+      --shadow:0 14px 34px rgba(0,0,0,.06);
     }
 
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-      font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-    }
-    a{text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
-    .top-bar{
-      background:var(--rose);
-      color:#fff;
-      text-align:center;
-      padding:14px 10px;
-      font-weight:900;
-      font-size:clamp(18px,4.6vw,28px);
-      letter-spacing:.04em;
-      text-transform:uppercase;
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     }
 
-    .hero{padding:28px 0 10px;background:#fff}
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    .hero{
+      padding:42px 0 22px;
+    }
+
     .hero-card{
-      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-      padding:26px 18px 22px;margin:0 auto;max-width:980px;
-      box-shadow:var(--shadow);text-align:center
+      max-width:980px;
+      margin:0 auto;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:34px 22px;
+      text-align:center;
+      box-shadow:var(--shadow);
     }
+
     .kicker{
       display:inline-block;
       background:var(--blue-2);
       color:var(--blue);
-      padding:6px 12px;
+      padding:7px 14px;
       border-radius:999px;
-      font-weight:900;
       font-size:12px;
-      letter-spacing:.05em;
-      text-transform:uppercase;
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size:clamp(28px,4.8vw,46px);
-      line-height:1.06;
       font-weight:900;
-      background:linear-gradient(90deg,var(--rose),var(--blue));
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-    }
-    .lead{color:var(--soft);font-size:18px;max-width:820px;margin:10px auto 0}
-    .divider{
-      height:10px;margin:18px auto 10px;max-width:320px;border-radius:999px;
-      background:linear-gradient(90deg,var(--rose),var(--blue))
+      text-transform:uppercase;
+      letter-spacing:.06em;
     }
 
-    section{padding:26px 0}
-    .grid{display:grid;gap:18px}
-    @media(min-width:900px){ .grid.two{grid-template-columns:1.05fr .95fr} }
+    h1{
+      margin:16px 0 12px;
+      font-size:clamp(30px,5vw,48px);
+      line-height:1.05;
+      font-weight:900;
+      background:linear-gradient(90deg,var(--rose),var(--blue));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .lead{
+      max-width:800px;
+      margin:0 auto;
+      color:var(--soft);
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    .divider{
+      height:10px;
+      max-width:320px;
+      margin:22px auto 0;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--rose),var(--blue));
+    }
+
+    section{
+      padding:28px 0;
+    }
+
+    .intro-box{
+      max-width:760px;
+      margin:0 auto 18px;
+      background:linear-gradient(90deg,#FCE9F0,#E6F3FF);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:22px;
+      box-shadow:0 10px 28px rgba(0,0,0,.04);
+    }
+
+    .intro-box p{
+      margin:0 0 12px;
+      color:var(--ink);
+      font-size:17px;
+      line-height:1.6;
+    }
+
+    .intro-box p:last-child{
+      margin-bottom:0;
+    }
+
+    .instruction-box{
+      max-width:760px;
+      margin:0 auto 18px;
+      text-align:center;
+      color:#475569;
+      font-size:16px;
+      line-height:1.6;
+      padding:14px 18px;
+      border-radius:14px;
+      background:#F8FAFC;
+      border:1px solid #E2E8F0;
+    }
 
     .card{
-      background:#fff;border:1px solid var(--line);border-radius:18px;
-      padding:18px;box-shadow:0 10px 28px rgba(31,35,48,.05)
+      max-width:760px;
+      margin:0 auto;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:22px;
+      box-shadow:0 10px 28px rgba(0,0,0,.05);
     }
-    .card.pink{background:var(--rose-2)}
-    .card.blue{background:var(--blue-2)}
-    .title{font-weight:900;margin:0 0 6px;font-size:18px}
-    p{margin:8px 0 0;color:var(--soft);font-size:16px}
+
+    p{
+      margin:8px 0 0;
+      color:var(--soft);
+      font-size:16px;
+      line-height:1.55;
+    }
 
     .quiz-head{
-      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-      margin-bottom:10px
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
     }
-    .progress{
-      flex:1;height:10px;background:#F1F5F9;border-radius:999px;overflow:hidden;
-      border:1px solid var(--line);min-width:180px;
-    }
-    .bar{height:100%;width:0%;background:linear-gradient(90deg,var(--rose),var(--blue))}
+
     .step{
-      font-weight:900;font-size:12px;color:#475569;letter-spacing:.06em;text-transform:uppercase;
-      white-space:nowrap;
+      font-size:12px;
+      font-weight:900;
+      text-transform:uppercase;
+      color:#475569;
+      letter-spacing:.06em;
     }
 
-    .q{margin-top:8px;font-weight:900;font-size:20px;color:var(--ink);line-height:1.25}
-    .options{display:grid;gap:10px;margin-top:14px}
+    .progress{
+      flex:1;
+      min-width:180px;
+      height:10px;
+      background:#F1F5F9;
+      border:1px solid var(--line);
+      border-radius:999px;
+      overflow:hidden;
+    }
+
+    .bar{
+      height:100%;
+      width:0%;
+      background:linear-gradient(90deg,var(--rose),var(--blue));
+      transition:.25s ease;
+    }
+
+    .question{
+      font-size:22px;
+      font-weight:900;
+      line-height:1.25;
+      margin-top:10px;
+    }
+
+    .options{
+      display:grid;
+      gap:10px;
+      margin-top:16px;
+    }
+
     .opt{
-      width:100%;text-align:left;border:1px solid var(--line);background:#fff;
-      padding:14px;border-radius:14px;cursor:pointer;font-weight:800;color:var(--ink);
-      box-shadow:0 8px 18px rgba(0,0,0,.04);transition:.15s ease;
+      width:100%;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--ink);
+      border-radius:14px;
+      padding:15px;
+      font-size:16px;
+      font-weight:800;
+      text-align:left;
+      cursor:pointer;
+      box-shadow:0 8px 18px rgba(0,0,0,.04);
+      transition:.15s ease;
     }
-    .opt:hover{transform:translateY(-1px);border-color:#dbeafe}
-    .opt:focus{outline:3px solid var(--blue-2)}
-    .opt small{display:block;margin-top:4px;color:var(--soft);font-weight:700}
 
-    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .opt:hover{
+      transform:translateY(-1px);
+      border-color:#cfe7ff;
+    }
+
+    .opt:focus{
+      outline:3px solid var(--blue-2);
+    }
+
+    .controls{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 14px;border-radius:14px;font-weight:900;border:0;cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 18px;
+      border-radius:14px;
+      border:0;
+      cursor:pointer;
+      font-weight:900;
+      font-size:15px;
+      text-decoration:none;
       box-shadow:0 8px 18px rgba(0,0,0,.08);
     }
-    .btn.primary{background:var(--rose);color:#fff}
-    .btn.ghost{background:#fff;border:2px solid var(--blue);color:var(--blue);box-shadow:none}
-    .btn:focus{outline:3px solid var(--blue-2)}
-    .btn[disabled]{opacity:.55;cursor:not-allowed}
 
-    .note{margin-top:12px;font-size:14px;color:#64748B}
-
-    /* TELA FINAL (sem revelar diagnóstico) */
-    .done{display:none;margin-top:16px}
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.06em;
-      padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);
+    .btn.primary{
+      background:var(--rose);
+      color:#fff;
     }
-    .badge .dot{width:9px;height:9px;border-radius:50%;background:var(--ok)}
-    .h2{
-      margin:12px 0 6px;
-      font-size:clamp(22px,3.5vw,34px);
-      line-height:1.1;
+
+    .done{
+      display:none;
+      text-align:center;
+      padding:30px 10px 10px;
+    }
+
+    .result-title{
+      font-size:clamp(28px,4vw,42px);
       font-weight:900;
-      background:linear-gradient(90deg,var(--rose),var(--blue));
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-    }
-    .callout{
-      margin-top:14px;border-radius:16px;padding:16px;
-      background:linear-gradient(90deg,var(--rose-2),var(--blue-2));
-      border:1px solid var(--line);
+      margin-bottom:14px;
+      background:linear-gradient(90deg,#C9376E,#4DA6FF);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
     }
 
-    footer{padding:22px 0;background:var(--rose);color:#fff;font-size:14px;text-align:center;margin-top:16px}
+    footer{
+      margin-top:18px;
+      padding:22px 10px;
+      background:var(--rose);
+      color:#fff;
+      text-align:center;
+      font-size:14px;
+    }
 
     .whats-float{
-      position:fixed; right:18px; bottom:18px; z-index:1000;
-      width:60px; height:60px; border-radius:50%;
-      background:#25D366; box-shadow:0 12px 28px rgba(0,0,0,.18);
-      display:flex; align-items:center; justify-content:center;
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:999;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:#25D366;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
     }
-    .whats-float svg{width:30px; height:30px; fill:#fff}
 
-    @media (prefers-reduced-motion: reduce){
-      *{scroll-behavior:auto!important;transition:none!important}
-      .opt:hover{transform:none}
+    .whats-float svg{
+      width:30px;
+      height:30px;
+      fill:#fff;
+    }
+
+    @media(max-width:600px){
+      .btn{
+        width:100%;
+      }
+
+      .hero{
+        padding-top:24px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="top-bar">Quiz de Diagnóstico</div>
 
-  <div class="hero">
+  <header class="hero">
     <div class="wrap">
       <div class="hero-card">
-        <span class="kicker">Leve • Rápido • Profundo</span>
-        <h1>Descubra qual trauma de infância pode estar influenciando sua linguagem de amor..</h1>
+        <span class="kicker">Diagnóstico 5 feridas emocionais + 5 linguegens do amor</span>
+
+        <h1>Descubra qual das 5 feridas emocionais influenciou nas formação das 5 linguagens do amor.</h1>
+
         <p class="lead">
-          Responda com sinceridade. No final, você envia uma mensagem pronta para o WhatsApp e recebe:
-          <strong>diagnóstico + linguagem de amor + primeiro passo concreto</strong>.
+          Sua linguagem do amor é um pedido silencioso de cura de uma ferida emocional.
         </p>
+
         <div class="divider"></div>
       </div>
     </div>
-  </div>
+  </header>
 
   <section>
-    <div class="wrap grid two">
+    <div class="wrap">
 
-      <!-- QUIZ -->
-      <div class="card" aria-live="polite">
-        <div class="quiz-head">
+      <div class="intro-box" id="introBox">
+        <p>
+          Agora você vai descobrir qual das 5 feridas emocionais:
+          <strong>rejeição, abandono, humilhação, traição ou injustiça</strong>
+          influenciou na formação da sua linguagem do amor.
+        </p>
+
+        <p>
+          Esse diagnóstico te ajuda a entender a ligação entre essas 5 feridas e as 5 linguagens do amor:
+          <strong>palavras de afirmação, tempo de qualidade, presentes, atos de serviço e toque físico.</strong>
+        </p>
+      </div>
+
+      <div class="instruction-box" id="instructionBox">
+        Assinale a resposta que mais combina com você hoje.
+        <strong>Não existe certo ou errado.</strong>
+      </div>
+
+      <main class="card" aria-live="polite">
+        <div class="quiz-head" id="quizHead">
           <div class="step" id="stepLabel">Pergunta 1 de 6</div>
           <div class="progress" aria-label="Progresso do quiz">
             <div class="bar" id="bar"></div>
           </div>
         </div>
 
-        <div class="q" id="question">Carregando…</div>
+        <div class="question" id="question">Carregando...</div>
+
         <div class="options" id="options"></div>
 
-        <div class="controls">
-          <button class="btn ghost" id="backBtn" type="button" disabled>Voltar</button>
-          <button class="btn primary" id="restartBtn" type="button" style="margin-left:auto">Reiniciar</button>
-        </div>
-
-        <div class="note">
-          Dica: escolha a alternativa que parece “mais automática” em você — não a mais bonita.
-        </div>
-
-        <!-- FINAL (envio no WhatsApp) -->
         <div class="done" id="done">
-          <span class="badge"><span class="dot"></span> pronto!</span>
-          <div class="h2">Seu diagnóstico está pronto ✅</div>
+          <div class="result-title">Diagnóstico Concluído</div>
 
-          <p>
-            Para receber <strong>a resposta + seu primeiro passo concreto</strong>, clique no botão abaixo e
-            envie a mensagem automática no WhatsApp.
+          <p style="max-width:600px;margin:0 auto 24px;">
+            Para receber a sua devolutiva, explicando qual ferida emocional apareceu
+            com mais força no seu resultado e como ela formou a sua linguagem do amor clique no botão abaixo:
           </p>
 
-          <div class="callout">
-            <b style="display:block;margin-bottom:6px;color:var(--ink)">Importante</b>
-            <p style="margin:0;color:var(--soft)">
-              O resultado será enviado no WhatsApp para você aplicar com clareza (sem se culpar e sem se violentar).
-            </p>
+          <div class="controls">
+            <a class="btn primary" id="ctaWhats" href="#" target="_blank" rel="noopener">
+              Receber meu resultado no WhatsApp
+            </a>
           </div>
-
-          <div class="controls" style="margin-top:14px">
-            <a class="btn primary" id="ctaWhats" href="#" target="_blank" rel="noopener">Enviar “MEU DIAGNÓSTICO” para receber o diagnóstico completo.</a>
-            <button class="btn ghost" id="copyBtn" type="button">Copiar mensagem</button>
-          </div>
-
-          <div class="note" id="copyMsg" style="display:none">Copiado ✅</div>
         </div>
-      </div>
-
-      <!-- LATERAL -->
-      <div class="grid" style="align-content:start">
-        <div class="card pink">
-          <div class="title">Como funciona</div>
-          <p>
-            Este quiz identifica qual ferida emocional está mais ativa e como ela influencia seu jeito de amar.
-            O resultado final é enviado no WhatsApp para você receber o diagnóstico completo e um passo prático.
-          </p>
-        </div>
-
-        <div class="card blue">
-          <div class="title">O que você vai receber</div>
-          <p>• Diagnóstico (ferida emocional mais provável)</p>
-          <p>• Linguagem de amor influenciada</p>
-          <p>• Primeiro passo concreto para começar a se libertar</p>
-        </div>
-
-        <div class="card">
-          <div class="title">A cura começa aqui</div>
-          <p>
-            Quando você entende o padrão, você para de implorar amor…
-            e começa a atrair amor leve.
-          </p>
-        </div>
-      </div>
+      </main>
 
     </div>
   </section>
 
-  <footer>© Quiz de Diagnóstico Emocional — Todos os direitos reservados EA FAVORETTO LTDA.</footer>
+  <footer>
+    © 5 feridas emocionais + 5 linguagens do amor — Evandro Favoretto
+  </footer>
 
-  <a class="whats-float" href="https://wa.me/5549998110445?text=Amor" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M20.5 3.5A10 10 0 0 0 3.2 17.7L2 22l4.4-1.2A10 10 0 1 0 20.5 3.5Zm-8.4 2.2c4.1 0 7.4 3.3 7.4 7.4a7.4 7.4 0 0 1-10.1 6.8l-.3-.1-2.6.7.7-2.5-.1-.3a7.4 7.4 0 0 1 5-11.9Zm4.2 9.8c-.2.6-1.1 1-1.5 1.1-.4.1-.9.1-1.5 0s-1.5-.5-2.6-1.1c-1-.6-1.8-1.6-2.1-2.1-.3-.5-.5-1.3-.1-1.9.2-.3.5-.8.8-.8h.6c.1 0 .4-.1.6.5.2.6.8 2 .9 2.2.1.2.1.4 0 .6s-.2.4-.4.6c-.2.2-.4.4-.2.7.2.3.9 1.4 2.1 2 .9.5 1.6.6 1.9.4.3-.2.4-.5.6-.8.2-.3.5-.4.8-.3l1.9.9c.3.1.5.3.6.5Z"/></svg>
+  <a class="whats-float" href="https://wa.me/5549998110445?text=MEU%20DIAGN%C3%93STICO" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M20.5 3.5A10 10 0 0 0 3.2 17.7L2 22l4.4-1.2A10 10 0 1 0 20.5 3.5Zm-8.4 2.2c4.1 0 7.4 3.3 7.4 7.4a7.4 7.4 0 0 1-10.1 6.8l-.3-.1-2.6.7.7-2.5-.1-.3a7.4 7.4 0 0 1 5-11.9Zm4.2 9.8c-.2.6-1.1 1-1.5 1.1-.4.1-.9.1-1.5 0s-1.5-.5-2.6-1.1c-1-.6-1.8-1.6-2.1-2.1-.3-.5-.5-1.3-.1-1.9.2-.3.5-.8.8-.8h.6c.1 0 .4-.1.6.5.2.6.8 2 .9 2.2.1.2.1.4 0 .6s-.2.4-.4.6c-.2.2-.4.4-.2.7.2.3.9 1.4 2.1 2 .9.5 1.6.6 1.9.4.3-.2.4-.5.6-.8.2-.3.5-.4.8-.3l1.9.9c.3.1.5.3.6.5Z"/>
+    </svg>
   </a>
 
   <script>
-    // Número correto (49 99811-0445) com código do país
     const waNumber = "5549998110445";
-    const waBase = (text) => `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
 
-    // TIPOS (apenas para cálculo interno, sem mostrar na tela)
     const TYPES = {
-      rejeicao: "Ferida da Rejeição",
-      traicao: "Ferida da Traição",
-      humilhacao: "Ferida da Humilhação",
-      injustica: "Ferida da Injustiça",
-      abandono: "Ferida do Abandono"
+      rejeicao: "Ferida da Rejeição - Linguagem do amor: Presentes",
+      traicao: "Ferida da Traição - Linguagem do amor: Toque físico",
+      humilhacao: "Ferida da Humilhação - Linguagem do amor: Palavras de afirmação",
+      injustica: "Ferida da Injustiça - Linguagem do amor: Atos de serviço",
+      abandono: "Ferida do Abandono - Linguagem do amor: Tempo de qualidade"
     };
 
-    // Perguntas: cada opção soma pontos para um tipo
     const QUESTIONS = [
       {
-        q: "Quando você sente que está ‘faltando amor’, o que mais te dói?",
+        q: "O que mais machuca você no amor?",
         opts: [
-          { text:"Ser deixada de lado / não escolhida", sub:"Preciso me sentir prioridade.", score:{rejeicao:2, abandono:1} },
-          { text:"Desconfiança e insegurança", sub:"Meu corpo fica em alerta.", score:{traicao:2} },
-          { text:"Sentir que não sou suficiente", sub:"Como se eu não tivesse valor.", score:{humilhacao:2} },
-          { text:"Ver promessas sem atitude", sub:"Eu preciso de ação.", score:{injustica:2} },
-          { text:"A ausência e a distância", sub:"Eu quero presença real.", score:{abandono:2} },
+          { text:"Não ser escolhida", score:{rejeicao:2} },
+          { text:"Não conseguir confiar", score:{traicao:2} },
+          { text:"Não se sentir suficiente", score:{humilhacao:2} },
+          { text:"Não ver atitude", score:{injustica:2} },
+          { text:"Sentir a pessoa distante", score:{abandono:2} }
         ]
       },
       {
-        q: "O que faz você relaxar mais rápido numa relação?",
+        q: "O que mais faz você se sentir amada?",
         opts: [
-          { text:"Um gesto concreto (lembrança, surpresa)", sub:"Um sinal de ‘eu escolho você’.", score:{rejeicao:2} },
-          { text:"Um abraço longo / toque", sub:"Meu corpo entende primeiro.", score:{traicao:2} },
-          { text:"Ouvir algo bom e verdadeiro sobre mim", sub:"Eu preciso de confirmação.", score:{humilhacao:2} },
-          { text:"Ver a pessoa fazendo o que disse", sub:"Consistência me acalma.", score:{injustica:2} },
-          { text:"Tempo juntos sem distração", sub:"Olho no olho.", score:{abandono:2} },
+          { text:"Receber presentes", score:{rejeicao:2} },
+          { text:"Receber toque e abraço", score:{traicao:2} },
+          { text:"Ouvir palavras bonitas", score:{humilhacao:2} },
+          { text:"Ver atitudes de cuidado", score:{injustica:2} },
+          { text:"Ter tempo junto", score:{abandono:2} }
         ]
       },
       {
-        q: "Quando você fica magoada, seu impulso é…",
+        q: "O que você mais espera de quem ama?",
         opts: [
-          { text:"Se afastar para não ser rejeitada", sub:"Eu me protejo antes.", score:{rejeicao:2} },
-          { text:"Checar sinais e testar lealdade", sub:"Eu preciso de segurança.", score:{traicao:2} },
-          { text:"Me culpar e pensar ‘eu exagerei’", sub:"Eu me diminuo.", score:{humilhacao:2} },
-          { text:"Cobrar justiça / coerência", sub:"Eu quero o certo.", score:{injustica:2} },
-          { text:"Entrar em ansiedade e buscar contato", sub:"Eu temo ser deixada.", score:{abandono:2} },
+          { text:"Que me escolha", score:{rejeicao:2} },
+          { text:"Que me dê segurança", score:{traicao:2} },
+          { text:"Que me valorize", score:{humilhacao:2} },
+          { text:"Que prove com atitudes", score:{injustica:2} },
+          { text:"Que esteja presente", score:{abandono:2} }
         ]
       },
       {
-        q: "Qual frase parece mais ‘a sua cara’ quando você ama?",
+        q: "Quando você se sente ferida, o que acontece?",
         opts: [
-          { text:"“Eu pensei em você e trouxe isso.”", sub:"Sinal de escolha.", score:{rejeicao:2} },
-          { text:"“Vem aqui, fica perto.”", sub:"Segurança no corpo.", score:{traicao:2} },
-          { text:"“Eu acredito em você.”", sub:"Afirmação cura.", score:{humilhacao:2} },
-          { text:"“Deixa que eu faço por você.”", sub:"Amor em atitude.", score:{injustica:2} },
-          { text:"“Vamos passar um tempo juntos.”", sub:"Presença.", score:{abandono:2} },
+          { text:"Eu me fecho", score:{rejeicao:2} },
+          { text:"Eu desconfio", score:{traicao:2} },
+          { text:"Eu me diminuo", score:{humilhacao:2} },
+          { text:"Eu cobro atitude", score:{injustica:2} },
+          { text:"Eu tenho medo da distância", score:{abandono:2} }
         ]
       },
       {
-        q: "O que mais dispara sua insegurança?",
+        q: "Qual frase combina mais com você?",
         opts: [
-          { text:"Não ser lembrada / não ser incluída", sub:"Eu interpreto como rejeição.", score:{rejeicao:2, abandono:1} },
-          { text:"Coisas escondidas / incoerências", sub:"Meu corpo entra em alerta.", score:{traicao:2} },
-          { text:"Ser criticada / exposta", sub:"Eu sinto vergonha.", score:{humilhacao:2} },
-          { text:"Injustiça e falta de responsabilidade", sub:"Eu fico rígida.", score:{injustica:2} },
-          { text:"Sumir, demora, frieza", sub:"Eu temo abandono.", score:{abandono:2} },
+          { text:"Quero ser escolhida", score:{rejeicao:2} },
+          { text:"Quero me sentir segura", score:{traicao:2} },
+          { text:"Quero ouvir que sou suficiente", score:{humilhacao:2} },
+          { text:"Quero ver atitudes", score:{injustica:2} },
+          { text:"Quero presença", score:{abandono:2} }
         ]
       },
       {
-        q: "Se você pudesse pedir uma coisa sem medo, seria…",
+        q: "O que você mais quer curar?",
         opts: [
-          { text:"“Me escolhe. Me prioriza.”", sub:"Eu quero sentir valor.", score:{rejeicao:2} },
-          { text:"“Me dá segurança e verdade.”", sub:"Eu quero confiar.", score:{traicao:2} },
-          { text:"“Me diga que eu sou suficiente.”", sub:"Eu quero reconhecimento.", score:{humilhacao:2} },
-          { text:"“Mostra com atitude.”", sub:"Eu quero constância.", score:{injustica:2} },
-          { text:"“Fica. Não vai embora.”", sub:"Eu quero presença.", score:{abandono:2} },
+          { text:"A dor de não ser escolhida", score:{rejeicao:2} },
+          { text:"A dor de não confiar", score:{traicao:2} },
+          { text:"A dor de não se sentir suficiente", score:{humilhacao:2} },
+          { text:"A dor de carregar tudo sozinha", score:{injustica:2} },
+          { text:"A dor de ser deixada", score:{abandono:2} }
         ]
-      },
+      }
     ];
 
-    // Estado
     let idx = 0;
     let answers = [];
-    let score = {rejeicao:0, traicao:0, humilhacao:0, injustica:0, abandono:0};
+    let score = {
+      rejeicao:0,
+      traicao:0,
+      humilhacao:0,
+      injustica:0,
+      abandono:0
+    };
 
-    const elQ = document.getElementById("question");
-    const elOps = document.getElementById("options");
-    const elStep = document.getElementById("stepLabel");
-    const elBar = document.getElementById("bar");
-    const backBtn = document.getElementById("backBtn");
-    const restartBtn = document.getElementById("restartBtn");
-
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const stepLabel = document.getElementById("stepLabel");
+    const bar = document.getElementById("bar");
     const done = document.getElementById("done");
     const ctaWhats = document.getElementById("ctaWhats");
-    const copyBtn = document.getElementById("copyBtn");
-    const copyMsg = document.getElementById("copyMsg");
+    const quizHead = document.getElementById("quizHead");
+    const introBox = document.getElementById("introBox");
+    const instructionBox = document.getElementById("instructionBox");
 
-    function clamp(n,min,max){ return Math.max(min, Math.min(max,n)); }
-
-    function resetAll(){
-      idx = 0;
-      answers = [];
-      score = {rejeicao:0, traicao:0, humilhacao:0, injustica:0, abandono:0};
-      done.style.display = "none";
-      copyMsg.style.display = "none";
-      render();
+    function waLink(text){
+      return `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
     }
 
-    function calcScores(){
-      score = {rejeicao:0, traicao:0, humilhacao:0, injustica:0, abandono:0};
-      answers.forEach((optIndex, qIndex) => {
-        if(optIndex == null) return;
-        const s = QUESTIONS[qIndex].opts[optIndex].score;
-        Object.keys(s).forEach(k => score[k] += s[k]);
+    function calculateScore(){
+      score = {
+        rejeicao:0,
+        traicao:0,
+        humilhacao:0,
+        injustica:0,
+        abandono:0
+      };
+
+      answers.forEach((optionIndex, questionIndex) => {
+        if(optionIndex === undefined) return;
+
+        const points = QUESTIONS[questionIndex].opts[optionIndex].score;
+
+        Object.keys(points).forEach(key => {
+          score[key] += points[key];
+        });
       });
     }
 
-    function render(){
+    function renderQuestion(){
       const total = QUESTIONS.length;
-      const current = clamp(idx+1, 1, total);
-      elStep.textContent = `Pergunta ${current} de ${total}`;
-      elBar.style.width = `${Math.round((idx/total)*100)}%`;
-      backBtn.disabled = idx === 0;
 
-      const q = QUESTIONS[idx];
-      elQ.textContent = q.q;
+      stepLabel.textContent = `Pergunta ${idx + 1} de ${total}`;
+      bar.style.width = `${Math.round((idx / total) * 100)}%`;
 
-      elOps.innerHTML = "";
-      q.opts.forEach((o, i) => {
-        const b = document.createElement("button");
-        b.type = "button";
-        b.className = "opt";
-        b.setAttribute("aria-label", o.text);
-        b.innerHTML = `${o.text}<small>${o.sub}</small>`;
-        b.addEventListener("click", () => choose(i));
-        elOps.appendChild(b);
+      const current = QUESTIONS[idx];
+
+      questionEl.textContent = current.q;
+      optionsEl.innerHTML = "";
+
+      current.opts.forEach((option, optionIndex) => {
+        const button = document.createElement("button");
+        button.className = "opt";
+        button.type = "button";
+        button.textContent = option.text;
+        button.addEventListener("click", () => chooseOption(optionIndex));
+        optionsEl.appendChild(button);
       });
     }
 
-    function choose(optIndex){
-      answers[idx] = optIndex;
-      calcScores();
+    function chooseOption(optionIndex){
+      answers[idx] = optionIndex;
+      calculateScore();
 
       if(idx < QUESTIONS.length - 1){
-        idx += 1;
-        render();
+        idx++;
+        renderQuestion();
       }else{
-        elBar.style.width = "100%";
-        finish();
+        finishQuiz();
       }
     }
 
-    function goBack(){
-      if(idx === 0) return;
-      idx -= 1;
-      render();
-    }
+    function getResult(){
+      const ordered = Object.entries(score).sort((a,b) => b[1] - a[1]);
+      const first = ordered[0];
+      const second = ordered[1];
 
-    function getTopTwo(){
-      const entries = Object.entries(score).sort((a,b)=>b[1]-a[1]);
-      const top = entries[0];
-      const second = entries[1];
-      return {top, second};
+      return {
+        mainKey:first[0],
+        secondKey:second[0],
+        isClose:first[1] - second[1] <= 1
+      };
     }
 
     function makeCode(){
-      // Código simples para você identificar (ex.: A1B-94K)
       const chars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
-      const part = (n)=>Array.from({length:n},()=>chars[Math.floor(Math.random()*chars.length)]).join("");
-      return `${part(3)}-${part(3)}`;
+      let code = "";
+
+      for(let i = 0; i < 6; i++){
+        code += chars[Math.floor(Math.random() * chars.length)];
+        if(i === 2) code += "-";
+      }
+
+      return code;
     }
 
-    function finish(){
-      const {top, second} = getTopTwo();
-      const topKey = top[0];
-      const topVal = top[1];
-      const secondKey = second[0];
-      const secondVal = second[1];
+    function finishQuiz(){
+      bar.style.width = "100%";
 
-      const close = (topVal - secondVal) <= 1;
-
+      const result = getResult();
       const code = makeCode();
 
-      // Mensagem: inclui o diagnóstico (pra você saber), mas sem mostrar na página
-      const msg =
-        `AMOR ✅\n` +
-        `Meu quiz ficou pronto.\n\n` +
+      const message =
+        `MEU DIAGNÓSTICO\n` +
+        `Meu diagnóstico foi concluído.\n\n` +
         `Código: ${code}\n` +
-        `Diagnóstico (interno): ${TYPES[topKey]}${close ? ` (2º: ${TYPES[secondKey]})` : ""}\n\n` +
-        `Quero receber minha resposta + o primeiro passo concreto para me libertar desse trauma.`;
+        `Diagnóstico interno: ${TYPES[result.mainKey]}${result.isClose ? `\nSegunda ferida próxima: ${TYPES[result.secondKey]}` : ""}\n\n` +
+        `Quero receber minha devolutiva explicando qual ferida emocional apareceu com mais força no meu resultado e como ela formou a minha linguagem do amor.`;
 
-      ctaWhats.href = waBase(msg);
+      ctaWhats.href = waLink(message);
 
-      // Copiar também essa mensagem
-      copyBtn.onclick = () => copyMessage(msg);
+      questionEl.style.display = "none";
+      optionsEl.style.display = "none";
+      quizHead.style.display = "none";
+      introBox.style.display = "none";
+      instructionBox.style.display = "none";
 
       done.style.display = "block";
       done.scrollIntoView({behavior:"smooth", block:"start"});
     }
 
-    async function copyMessage(text){
-      try{
-        await navigator.clipboard.writeText(text);
-        copyMsg.style.display = "block";
-        setTimeout(()=>copyMsg.style.display="none", 1400);
-      }catch(e){
-        alert("Não foi possível copiar automaticamente. Copie a mensagem pelo WhatsApp ao clicar no botão.");
-      }
-    }
-
-    backBtn.addEventListener("click", goBack);
-    restartBtn.addEventListener("click", resetAll);
-
-    resetAll();
+    renderQuestion();
   </script>
+
 </body>
 </html>
